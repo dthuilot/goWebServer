@@ -17,5 +17,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: ${{ env.REPO }}
+          repository: ${{ env.REPO }}/gowebserver
           tag_with_ref: true
