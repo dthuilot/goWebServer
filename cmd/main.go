@@ -22,6 +22,7 @@ func main() {
 	// Add your routes as needed
 	r.Handle("/", handlers.LoggingHandler(os.Stdout, http.HandlerFunc(homeHandler)))
 	r.Handle("/healthz", handlers.LoggingHandler(os.Stdout, http.HandlerFunc(healthz)))
+	r.Handle("/varcheck", handlers.LoggingHandler(os.Stdout, http.HandlerFunc(varcheck)))
 
 	srv := &http.Server{
 		Addr: "0.0.0.0:8080",
